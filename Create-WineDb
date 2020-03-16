@@ -1,0 +1,30 @@
+CREATE DATABASE WineDb
+GO
+USE WineDb
+GO
+
+CREATE TABLE Wine(
+ WineId int IDENTITY PRIMARY KEY,
+ Name nvarchar(50) NOT NULL,
+ Category nvarchar(15) NOT NULL,
+ Year int,
+ Price MONEY DEFAULT 0 NOT NULL,
+ AddedOn datetime2 DEFAULT SYSDATETIME() NOT NULL,
+ UpdatedOn datetime2)
+
+CREATE TABLE Customer(
+ CustomerId int IDENTITY PRIMARY KEY,
+ FirstName nvarchar(50) NOT NULL,
+ LastName nvarchar(50) NOT NULL,
+ FavoriteWineId int,
+ CONSTRAINT FK_Customer_Wine FOREIGN KEY (FavoriteWineId) REFERENCES Wine(WineId))
+
+CREATE TABLE [Order](
+ OrderId int IDENTITY PRIMARY KEY,
+ OrderedOn datetime2 DEFAULT SYSDATETIME() NOT NULL,
+ CustomerId int NOT NULL,
+ WineId int NOT NULL,
+ Quantity int NOT NULL,
+ Price MONEY NOT NULL,
+ CONSTRAINT FK_Order_Customer FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId),
+ CONSTRAINT FK_Order_Wine FOREIGN KEY (WineId) REFERENCES Wine(WineId))
