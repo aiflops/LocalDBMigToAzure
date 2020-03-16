@@ -1,0 +1,26 @@
+SET IDENTITY_INSERT Wine ON
+INSERT Wine (WineId, Name, Category, Year) VALUES (1, 'Chateau Penin', 'Bordeaux', 2008)
+INSERT Wine (WineId, Name, Category, Year) VALUES (2, 'McLaren Valley', 'Cabernet', 2005)
+INSERT Wine (WineId, Name, Category, Year) VALUES (3, 'Mendoza', 'Merlot', 2010)
+INSERT Wine (WineId, Name, Category, Year) VALUES (4, 'Valle Central', 'Merlot', 2009)
+INSERT Wine (WineId, Name, Category, Year) VALUES (5, 'Mendoza', 'Malbec', 2010)
+INSERT Wine (WineId, Name, Category, Year) VALUES (6, 'Tuscany', 'Brunello', 2007)
+INSERT Wine (WineId, Name, Category, Year) VALUES (7, 'Willamette Valley', 'Pinot Noir',
+2009)
+INSERT Wine (WineId, Name, Category, Year) VALUES (8, 'Bordeaux', 'Cabernet', 2009)
+INSERT Wine (WineId, Name, Category, Year) VALUES (9, 'Barossa Valley', 'Shiraz', 2010)
+INSERT Wine (WineId, Name, Category, Year) VALUES (10, 'Napa Valley', 'Syrah', 2010)
+INSERT Wine (WineId, Name, Category, Year) VALUES (11, 'Barossa Valley', 'Grenache', 2006)
+INSERT Wine (WineId, Name, Category, Year) VALUES (12, 'La Mancha', 'Mourvedre', 2009)
+INSERT Wine (WineId, Name, Category, Year) VALUES (13, 'Beaujolais', 'Gamay', 2011)
+INSERT Wine (WineId, Name, Category, Year) VALUES (14, 'Sonoma', 'Zinfandel', 2011)
+INSERT Wine (WineId, Name, Category, Year) VALUES (15, 'Tuscany', 'Sangiovese', 2010)
+SET IDENTITY_INSERT Wine OFF
+SET IDENTITY_INSERT Customer ON
+INSERT Customer (CustomerId, FirstName, LastName, FavoriteWineId) VALUES
+ (1, 'Jeff', 'Hay', 4)
+INSERT Customer (CustomerId, FirstName, LastName, FavoriteWineId) VALUES
+ (2, 'Mark', 'Hanson', 3)
+INSERT Customer (CustomerId, FirstName, LastName, FavoriteWineId) VALUES
+ (3, 'Jeff', 'Phillips', 2)
+SET IDENTITY_INSERT Customer OFF
